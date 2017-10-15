@@ -17,6 +17,9 @@
             <string>HelveticaNeue</string>
             <string>HelveticaNeue-Bold</string>
         </array>
+        <array key="TimesNewRoman.ttf">
+            <string>TimesNewRomanPSMT</string>
+        </array>
     </customFonts>
     <scenes>
         <!--LoginVC-->
@@ -120,7 +123,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="200"/>
                             </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="39w-mw-XxT">
-                                <rect key="frame" x="169" y="142.5" width="37.5" height="44"/>
+                                <rect key="frame" x="169" y="134.5" width="37.5" height="60"/>
                                 <color key="color" red="0.51624040530000004" green="0.4168919036" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="nMf-D5-ANe">
@@ -129,18 +132,60 @@
                                     <constraint firstAttribute="height" constant="30" id="YaL-sH-jQL"/>
                                 </constraints>
                             </pageControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BlJ-5V-LIk">
+                                <rect key="frame" x="0.0" y="269" width="375" height="353.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="categoryCell" id="5iR-pr-lDU">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5iR-pr-lDU" id="hi4-Bn-oWf">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VTu-fE-hlQ">
+                                <rect key="frame" x="0.0" y="621" width="375" height="46"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© 2017 Vamsi. All rights reserved." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="jFb-Hr-jfY">
+                                        <rect key="frame" x="75.5" y="13" width="225" height="20"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1224730983" green="0.3899359107" blue="0.60431116819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="jFb-Hr-jfY" firstAttribute="centerX" secondItem="VTu-fE-hlQ" secondAttribute="centerX" id="SaP-Hq-gYb"/>
+                                    <constraint firstItem="jFb-Hr-jfY" firstAttribute="centerY" secondItem="VTu-fE-hlQ" secondAttribute="centerY" id="c7O-Yj-vqO"/>
+                                    <constraint firstItem="jFb-Hr-jfY" firstAttribute="width" secondItem="VTu-fE-hlQ" secondAttribute="width" multiplier="0.6" id="udw-aw-bwe"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="nMf-D5-ANe" firstAttribute="bottom" secondItem="thg-lK-2RR" secondAttribute="bottom" id="8pM-Q6-DHk"/>
                             <constraint firstItem="39w-mw-XxT" firstAttribute="centerY" secondItem="thg-lK-2RR" secondAttribute="centerY" id="9al-58-Pjl"/>
+                            <constraint firstItem="VTu-fE-hlQ" firstAttribute="centerX" secondItem="7pZ-Fv-UGj" secondAttribute="centerX" id="BNZ-pb-oVe"/>
                             <constraint firstItem="39w-mw-XxT" firstAttribute="width" secondItem="thg-lK-2RR" secondAttribute="width" multiplier="0.1" id="DHY-CT-0rF"/>
+                            <constraint firstItem="BlJ-5V-LIk" firstAttribute="centerX" secondItem="TSJ-7c-KTL" secondAttribute="centerX" id="DXq-Rn-KGU"/>
+                            <constraint firstItem="VTu-fE-hlQ" firstAttribute="height" secondItem="7pZ-Fv-UGj" secondAttribute="height" multiplier="0.07" id="Df7-li-ADo"/>
+                            <constraint firstItem="VTu-fE-hlQ" firstAttribute="width" secondItem="7pZ-Fv-UGj" secondAttribute="width" id="GPZ-VX-7am"/>
+                            <constraint firstItem="VTu-fE-hlQ" firstAttribute="leading" secondItem="TSJ-7c-KTL" secondAttribute="leading" id="HSk-wd-hgH"/>
                             <constraint firstItem="thg-lK-2RR" firstAttribute="top" secondItem="TSJ-7c-KTL" secondAttribute="top" id="RJe-cc-G9i"/>
-                            <constraint firstItem="39w-mw-XxT" firstAttribute="height" secondItem="thg-lK-2RR" secondAttribute="height" multiplier="0.22" id="RlO-G1-bjh"/>
+                            <constraint firstItem="39w-mw-XxT" firstAttribute="height" secondItem="thg-lK-2RR" secondAttribute="height" multiplier="0.3" id="RlO-G1-bjh"/>
+                            <constraint firstItem="BlJ-5V-LIk" firstAttribute="height" secondItem="7pZ-Fv-UGj" secondAttribute="height" multiplier="0.53" id="UvN-qB-2pL"/>
                             <constraint firstItem="39w-mw-XxT" firstAttribute="centerX" secondItem="thg-lK-2RR" secondAttribute="centerX" id="XHD-68-kDF"/>
+                            <constraint firstItem="BlJ-5V-LIk" firstAttribute="width" secondItem="7pZ-Fv-UGj" secondAttribute="width" id="aEb-wN-6Rp"/>
+                            <constraint firstItem="VTu-fE-hlQ" firstAttribute="top" secondItem="BlJ-5V-LIk" secondAttribute="bottom" constant="-1.5" id="cCn-Ck-T7w"/>
                             <constraint firstItem="TSJ-7c-KTL" firstAttribute="trailing" secondItem="thg-lK-2RR" secondAttribute="trailing" id="hP5-86-Fzk"/>
                             <constraint firstItem="nMf-D5-ANe" firstAttribute="centerX" secondItem="7pZ-Fv-UGj" secondAttribute="centerX" id="ivJ-cQ-Igp"/>
+                            <constraint firstItem="VTu-fE-hlQ" firstAttribute="trailing" secondItem="TSJ-7c-KTL" secondAttribute="trailing" id="kic-R3-EYS"/>
+                            <constraint firstItem="BlJ-5V-LIk" firstAttribute="top" secondItem="thg-lK-2RR" secondAttribute="bottom" constant="5" id="m8c-qI-yow"/>
                             <constraint firstItem="thg-lK-2RR" firstAttribute="height" secondItem="7pZ-Fv-UGj" secondAttribute="height" multiplier="0.3" id="ph6-WV-DRz"/>
+                            <constraint firstItem="TSJ-7c-KTL" firstAttribute="bottom" secondItem="VTu-fE-hlQ" secondAttribute="bottom" id="tG8-in-lD3"/>
                             <constraint firstItem="nMf-D5-ANe" firstAttribute="width" secondItem="thg-lK-2RR" secondAttribute="width" id="xug-wJ-lAb"/>
                             <constraint firstItem="thg-lK-2RR" firstAttribute="leading" secondItem="TSJ-7c-KTL" secondAttribute="leading" id="xyq-Aw-Zwn"/>
                         </constraints>
@@ -151,6 +196,7 @@
                         <outlet property="activitySpinner" destination="39w-mw-XxT" id="8i8-gQ-Iha"/>
                         <outlet property="pageCntrl" destination="nMf-D5-ANe" id="V8U-KU-gbk"/>
                         <outlet property="sliderImgView" destination="thg-lK-2RR" id="J8f-hW-oiu"/>
+                        <outlet property="tableView" destination="BlJ-5V-LIk" id="Sbl-49-fJW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcU-JY-1qn" userLabel="First Responder" sceneMemberID="firstResponder"/>

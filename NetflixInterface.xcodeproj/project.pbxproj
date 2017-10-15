@@ -77,6 +77,7 @@
 		9E6EB5D51F92DD780088BC1A /* NetflixInterface */ = {
 			isa = PBXGroup;
 			children = (
+				9E6EB6001F93C9F70088BC1A /* Error Alerts */,
 				9E6EB5FD1F93129E0088BC1A /* Extensions */,
 				9E6EB5F81F92FC830088BC1A /* Services */,
 				9E6EB5F11F92E7540088BC1A /* Utilities */,
@@ -141,6 +142,13 @@
 				9E6EB5FE1F9312AD0088BC1A /* ImageViewExt.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9E6EB6001F93C9F70088BC1A /* Error Alerts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Error Alerts";
 			sourceTree = "<group>";
 		};
 		D27C6AD1BEB8D69A18E42A44 /* Pods */ = {
