@@ -8,6 +8,7 @@
 
 import UIKit
 
-struct MovieInfo {
-    let name: String!
+struct TVInfo {
+    let title: String!
+    let wallposterUrl: String!
 }

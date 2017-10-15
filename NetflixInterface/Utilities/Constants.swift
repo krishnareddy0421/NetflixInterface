@@ -8,6 +8,15 @@
 
 import Foundation
 
+typealias CompletionHandler = (_ Success: Bool) -> ()
+
+// MARK: - API Information
+let API_KEY = "38c202b89452edcd18696b9e9962f08a"
+
+
+// MARK: - Url's
+let BASE_URL = "http://image.tmdb.org/t/p/w780/"
+let TV_ON_THE_AIR = "https://api.themoviedb.org/3/tv/on_the_air?api_key=\(API_KEY)&language=en-US&page=1"
 
 // MARK: - Segues
 let TO_SIGNUP_SEGUE = "toSignUpVC"

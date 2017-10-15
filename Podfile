@@ -5,6 +5,8 @@ target 'NetflixInterface' do
 
 pod 'Alamofire', '~> 4.5'
 pod 'SwiftyJSON'
+
 pod 'Firebase/Core'
 pod 'Firebase/Auth’
+
 end
