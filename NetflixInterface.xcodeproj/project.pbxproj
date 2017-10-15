@@ -8,10 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		9E6EB5D71F92DD780088BC1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6EB5D61F92DD780088BC1A /* AppDelegate.swift */; };
-		9E6EB5D91F92DD790088BC1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6EB5D81F92DD790088BC1A /* ViewController.swift */; };
+		9E6EB5D91F92DD790088BC1A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6EB5D81F92DD790088BC1A /* LoginVC.swift */; };
 		9E6EB5DC1F92DD790088BC1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E6EB5DA1F92DD790088BC1A /* Main.storyboard */; };
 		9E6EB5DE1F92DD790088BC1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E6EB5DD1F92DD790088BC1A /* Assets.xcassets */; };
 		9E6EB5E11F92DD790088BC1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E6EB5DF1F92DD790088BC1A /* LaunchScreen.storyboard */; };
+		9E6EB5E91F92E1690088BC1A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E6EB5E81F92DF940088BC1A /* GoogleService-Info.plist */; };
+		9E6EB5ED1F92E5E80088BC1A /* CurvedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6EB5EC1F92E5E80088BC1A /* CurvedButton.swift */; };
+		9E6EB5F01F92E7380088BC1A /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6EB5EF1F92E7380088BC1A /* MovieInfo.swift */; };
+		9E6EB5F31F92E76A0088BC1A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6EB5F21F92E76A0088BC1A /* Constants.swift */; };
+		9E6EB5F51F92EBF40088BC1A /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6EB5F41F92EBF40088BC1A /* SignupVC.swift */; };
 		DE5259B9CE19423935DE36FB /* Pods_NetflixInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E195769B9C55AF2B8E7526C /* Pods_NetflixInterface.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,12 +25,16 @@
 		9E195769B9C55AF2B8E7526C /* Pods_NetflixInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetflixInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E6EB5D31F92DD780088BC1A /* NetflixInterface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixInterface.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E6EB5D61F92DD780088BC1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9E6EB5D81F92DD790088BC1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9E6EB5D81F92DD790088BC1A /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		9E6EB5DB1F92DD790088BC1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E6EB5DD1F92DD790088BC1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E6EB5E01F92DD790088BC1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E6EB5E21F92DD790088BC1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E6EB5E81F92DF940088BC1A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9E6EB5EC1F92E5E80088BC1A /* CurvedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedButton.swift; sourceTree = "<group>"; };
+		9E6EB5EF1F92E7380088BC1A /* MovieInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfo.swift; sourceTree = "<group>"; };
+		9E6EB5F21F92E76A0088BC1A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9E6EB5F41F92EBF40088BC1A /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		FE2723D541051E2201E4385E /* Pods-NetflixInterface.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetflixInterface.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetflixInterface/Pods-NetflixInterface.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,8 +71,11 @@
 		9E6EB5D51F92DD780088BC1A /* NetflixInterface */ = {
 			isa = PBXGroup;
 			children = (
+				9E6EB5F11F92E7540088BC1A /* Utilities */,
+				9E6EB5EE1F92E7140088BC1A /* Model */,
+				9E6EB5EB1F92E5DA0088BC1A /* View */,
+				9E6EB5EA1F92E5CD0088BC1A /* Controller */,
 				9E6EB5D61F92DD780088BC1A /* AppDelegate.swift */,
-				9E6EB5D81F92DD790088BC1A /* ViewController.swift */,
 				9E6EB5DA1F92DD790088BC1A /* Main.storyboard */,
 				9E6EB5DD1F92DD790088BC1A /* Assets.xcassets */,
 				9E6EB5DF1F92DD790088BC1A /* LaunchScreen.storyboard */,
@@ -71,6 +83,39 @@
 				9E6EB5E81F92DF940088BC1A /* GoogleService-Info.plist */,
 			);
 			path = NetflixInterface;
+			sourceTree = "<group>";
+		};
+		9E6EB5EA1F92E5CD0088BC1A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9E6EB5D81F92DD790088BC1A /* LoginVC.swift */,
+				9E6EB5F41F92EBF40088BC1A /* SignupVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9E6EB5EB1F92E5DA0088BC1A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9E6EB5EC1F92E5E80088BC1A /* CurvedButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9E6EB5EE1F92E7140088BC1A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9E6EB5EF1F92E7380088BC1A /* MovieInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9E6EB5F11F92E7540088BC1A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9E6EB5F21F92E76A0088BC1A /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		D27C6AD1BEB8D69A18E42A44 /* Pods */ = {
@@ -153,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E6EB5E11F92DD790088BC1A /* LaunchScreen.storyboard in Resources */,
+				9E6EB5E91F92E1690088BC1A /* GoogleService-Info.plist in Resources */,
 				9E6EB5DE1F92DD790088BC1A /* Assets.xcassets in Resources */,
 				9E6EB5DC1F92DD790088BC1A /* Main.storyboard in Resources */,
 			);
@@ -227,7 +273,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E6EB5D91F92DD790088BC1A /* ViewController.swift in Sources */,
+				9E6EB5F51F92EBF40088BC1A /* SignupVC.swift in Sources */,
+				9E6EB5F31F92E76A0088BC1A /* Constants.swift in Sources */,
+				9E6EB5D91F92DD790088BC1A /* LoginVC.swift in Sources */,
+				9E6EB5ED1F92E5E80088BC1A /* CurvedButton.swift in Sources */,
+				9E6EB5F01F92E7380088BC1A /* MovieInfo.swift in Sources */,
 				9E6EB5D71F92DD780088BC1A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

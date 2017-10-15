@@ -1,24 +1,202 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AmericanTypewriter.ttc">
+            <string>AmericanTypewriter-Bold</string>
+        </array>
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="NetflixInterface" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="yA6-QG-Qmw">
+                                <rect key="frame" x="75.5" y="102.5" width="225" height="62"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="50"/>
+                                <color key="textColor" red="0.1224730983" green="0.3899359107" blue="0.60431116819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login to get started" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="lha-kV-u8Q">
+                                <rect key="frame" x="94" y="221.5" width="187.5" height="24"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="19"/>
+                                <color key="textColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="f9p-X1-zZb">
+                                <rect key="frame" x="47" y="280" width="281.5" height="40"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="uWy-L8-pbC">
+                                <rect key="frame" x="47" y="330" width="281" height="40"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Uk-aL-W3f" customClass="CurvedButton" customModule="NetflixInterface" customModuleProvider="target">
+                                <rect key="frame" x="47" y="373" width="281" height="46.5"/>
+                                <color key="backgroundColor" red="0.1224730983" green="0.3899359107" blue="0.60431116819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cXG-g5-DJ4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVR-ml-x26">
+                                <rect key="frame" x="62" y="535.5" width="251" height="30"/>
+                                <state key="normal" title="Don't have an account? Sign up here"/>
+                                <connections>
+                                    <action selector="signupBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nEv-Pd-4YS"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lha-kV-u8Q" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.7" id="0a0-tC-s9u"/>
+                            <constraint firstItem="uWy-L8-pbC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.05" id="1YU-IC-3Ea"/>
+                            <constraint firstItem="lha-kV-u8Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="25r-hq-s49"/>
+                            <constraint firstItem="f9p-X1-zZb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2eM-lz-Lbp"/>
+                            <constraint firstItem="uWy-L8-pbC" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.75" id="81C-qj-ZyG"/>
+                            <constraint firstItem="yA6-QG-Qmw" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="D2T-Rf-ujr"/>
+                            <constraint firstItem="f9p-X1-zZb" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.75" id="E13-j4-E5a"/>
+                            <constraint firstItem="4Uk-aL-W3f" firstAttribute="width" secondItem="uWy-L8-pbC" secondAttribute="width" id="FAZ-ar-ey8"/>
+                            <constraint firstItem="YVR-ml-x26" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gjz-tS-pva"/>
+                            <constraint firstItem="4Uk-aL-W3f" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.07" id="Ktf-fh-yMc"/>
+                            <constraint firstItem="4Uk-aL-W3f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mkh-zx-vJx"/>
+                            <constraint firstItem="uWy-L8-pbC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xeq-om-rdF"/>
+                            <constraint firstItem="uWy-L8-pbC" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.06" id="Yd2-sI-5aV"/>
+                            <constraint firstItem="f9p-X1-zZb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.9" id="bXP-fn-b1w"/>
+                            <constraint firstItem="yA6-QG-Qmw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.4" id="neR-Gu-Dsu"/>
+                            <constraint firstItem="4Uk-aL-W3f" firstAttribute="top" secondItem="uWy-L8-pbC" secondAttribute="bottom" constant="3" id="qsf-lJ-Cpe"/>
+                            <constraint firstItem="f9p-X1-zZb" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.06" id="tgh-sz-xwq"/>
+                            <constraint firstItem="yA6-QG-Qmw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uNi-4M-4M9"/>
+                            <constraint firstItem="YVR-ml-x26" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.65" id="unP-GM-AkG"/>
+                            <constraint firstItem="lha-kV-u8Q" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="vVx-iC-n7y"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTxt" destination="f9p-X1-zZb" id="JWE-FX-ism"/>
+                        <outlet property="passwordTxt" destination="uWy-L8-pbC" id="yjC-0h-Tkd"/>
+                        <segue destination="jha-oW-VQb" kind="presentation" identifier="toSignUpVC" id="1xu-f0-nHZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--SignupVC-->
+        <scene sceneID="g1q-v8-fhL">
+            <objects>
+                <viewController id="jha-oW-VQb" customClass="SignupVC" customModule="NetflixInterface" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2i5-ss-EUI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create User" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="dkh-eO-soq">
+                                <rect key="frame" x="47" y="93.5" width="281" height="80"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="44"/>
+                                <color key="textColor" red="0.1224730983" green="0.3899359107" blue="0.60431116819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WPO-Sc-QQ6">
+                                <rect key="frame" x="47.5" y="230" width="281" height="40"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Alc-vX-itR">
+                                <rect key="frame" x="47" y="290" width="281" height="40"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="imv-il-ljN">
+                                <rect key="frame" x="47.5" y="350" width="281" height="40"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ak6-3T-UHm" customClass="CurvedButton" customModule="NetflixInterface" customModuleProvider="target">
+                                <rect key="frame" x="215.5" y="450.5" width="112.5" height="33"/>
+                                <color key="backgroundColor" red="0.1224730983" green="0.3899359107" blue="0.60431116819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                <state key="normal" title="Create">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="createBtnPressed:" destination="jha-oW-VQb" eventType="touchUpInside" id="bpK-oT-glz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhA-dB-YqR" customClass="CurvedButton" customModule="NetflixInterface" customModuleProvider="target">
+                                <rect key="frame" x="47" y="450.5" width="112.5" height="33"/>
+                                <color key="backgroundColor" red="0.1224730983" green="0.3899359107" blue="0.60431116819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelBtnPressed:" destination="jha-oW-VQb" eventType="touchUpInside" id="23Y-FO-aT2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dkh-eO-soq" firstAttribute="height" secondItem="2i5-ss-EUI" secondAttribute="height" multiplier="0.12" id="2Z9-qW-Nru"/>
+                            <constraint firstItem="imv-il-ljN" firstAttribute="centerX" secondItem="2i5-ss-EUI" secondAttribute="centerX" id="7wf-NK-pOs"/>
+                            <constraint firstItem="Alc-vX-itR" firstAttribute="height" secondItem="2i5-ss-EUI" secondAttribute="height" multiplier="0.06" id="9Gh-FP-zQE"/>
+                            <constraint firstItem="imv-il-ljN" firstAttribute="centerY" secondItem="2i5-ss-EUI" secondAttribute="centerY" multiplier="1.11" id="B8t-Fu-0bh"/>
+                            <constraint firstItem="dkh-eO-soq" firstAttribute="centerY" secondItem="2i5-ss-EUI" secondAttribute="centerY" multiplier="0.4" id="EJg-uJ-pxY"/>
+                            <constraint firstItem="BhA-dB-YqR" firstAttribute="width" secondItem="2i5-ss-EUI" secondAttribute="width" multiplier="0.3" id="NR7-tA-Dy4"/>
+                            <constraint firstItem="Alc-vX-itR" firstAttribute="centerX" secondItem="2i5-ss-EUI" secondAttribute="centerX" id="OMM-Zi-TjW"/>
+                            <constraint firstItem="dkh-eO-soq" firstAttribute="centerX" secondItem="2i5-ss-EUI" secondAttribute="centerX" id="Pys-6D-Haj"/>
+                            <constraint firstItem="Ak6-3T-UHm" firstAttribute="centerX" secondItem="2i5-ss-EUI" secondAttribute="centerX" multiplier="1.45" id="QPI-fN-YGw"/>
+                            <constraint firstItem="WPO-Sc-QQ6" firstAttribute="centerY" secondItem="2i5-ss-EUI" secondAttribute="centerY" multiplier="0.75" id="R5e-YZ-CMC"/>
+                            <constraint firstItem="Ak6-3T-UHm" firstAttribute="centerY" secondItem="2i5-ss-EUI" secondAttribute="centerY" multiplier="1.4" id="SDU-6z-276"/>
+                            <constraint firstItem="dkh-eO-soq" firstAttribute="width" secondItem="2i5-ss-EUI" secondAttribute="width" multiplier="0.75" id="SZs-Yu-RFw"/>
+                            <constraint firstItem="Alc-vX-itR" firstAttribute="centerY" secondItem="2i5-ss-EUI" secondAttribute="centerY" multiplier="0.93" id="TWw-mt-KPJ"/>
+                            <constraint firstItem="WPO-Sc-QQ6" firstAttribute="height" secondItem="2i5-ss-EUI" secondAttribute="height" multiplier="0.06" id="YJZ-Uq-5sO"/>
+                            <constraint firstItem="Alc-vX-itR" firstAttribute="width" secondItem="2i5-ss-EUI" secondAttribute="width" multiplier="0.75" id="ZoO-5n-k6n"/>
+                            <constraint firstItem="BhA-dB-YqR" firstAttribute="centerY" secondItem="2i5-ss-EUI" secondAttribute="centerY" multiplier="1.4" id="aho-I1-U1g"/>
+                            <constraint firstItem="BhA-dB-YqR" firstAttribute="centerX" secondItem="2i5-ss-EUI" secondAttribute="centerX" multiplier="0.55" id="bwd-rE-74I"/>
+                            <constraint firstItem="WPO-Sc-QQ6" firstAttribute="width" secondItem="2i5-ss-EUI" secondAttribute="width" multiplier="0.75" id="eNp-da-XSL"/>
+                            <constraint firstItem="imv-il-ljN" firstAttribute="width" secondItem="2i5-ss-EUI" secondAttribute="width" multiplier="0.75" id="fUt-47-FUk"/>
+                            <constraint firstItem="imv-il-ljN" firstAttribute="height" secondItem="2i5-ss-EUI" secondAttribute="height" multiplier="0.06" id="iKg-jc-CH9"/>
+                            <constraint firstItem="Ak6-3T-UHm" firstAttribute="height" secondItem="2i5-ss-EUI" secondAttribute="height" multiplier="0.05" id="iy6-EH-Qf2"/>
+                            <constraint firstItem="BhA-dB-YqR" firstAttribute="height" secondItem="2i5-ss-EUI" secondAttribute="height" multiplier="0.05" id="nv3-Q8-ZsY"/>
+                            <constraint firstItem="Ak6-3T-UHm" firstAttribute="width" secondItem="2i5-ss-EUI" secondAttribute="width" multiplier="0.3" id="ssu-1t-GUR"/>
+                            <constraint firstItem="WPO-Sc-QQ6" firstAttribute="centerX" secondItem="2i5-ss-EUI" secondAttribute="centerX" id="y8F-Th-9CF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cUI-U2-4wh"/>
+                    </view>
+                    <connections>
+                        <outlet property="confPasswordTxt" destination="imv-il-ljN" id="bMj-Bs-Wg3"/>
+                        <outlet property="emailTxt" destination="WPO-Sc-QQ6" id="tmf-d3-Ruf"/>
+                        <outlet property="passwordTxt" destination="Alc-vX-itR" id="kzU-eR-N4u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FNK-p3-AXQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="670" y="815"/>
         </scene>
     </scenes>
 </document>
