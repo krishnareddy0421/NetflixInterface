@@ -16,11 +16,35 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.setupView()
+    }
+    
+    func setupView() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func handleTap() {
+        view.endEditing(true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        emailTxt.text = ""
+        passwordTxt.text = ""
     }
 
     @IBAction func loginBtnPressed(_ sender: Any) {
-        
+        guard let email = emailTxt.text, let password = passwordTxt.text, emailTxt.text != "", passwordTxt.text != "" else {
+            self.userCredentialsAlert()
+            return
+        }
+        AuthService.instance.login(userEmail: email, userPassword: password, completion: { (success) in
+            if success {
+                self.performSegue(withIdentifier: TO_HOME_SEGUE, sender: nil)
+            } else {
+                self.userEmailWrongAlert()
+            }
+        })
     }
     
     @IBAction func signupBtnPressed(_ sender: Any) {

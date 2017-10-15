@@ -17,11 +17,30 @@ class SignupVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.setupView()
+    }
+    
+    func setupView() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func handleTap() {
+        view.endEditing(true)
     }
     
     @IBAction func createBtnPressed(_ sender: Any) {
+        guard let email = emailTxt.text, let password = passwordTxt.text, let confPassword = confPasswordTxt.text, emailTxt.text != "", passwordTxt.text != "", confPasswordTxt.text != "", password == confPassword else {
+            self.userCredentialsAlert()
+            return
+        }
+        AuthService.instance.createUser(userEmail: email, userPassword: password) { (success) in
+            if success {
+                self.performSegue(withIdentifier: TO_HOME_SEGUE, sender: nil)
+            } else {
+                self.userEmailWrongAlert()
+            }
+        }
     }
     
     @IBAction func cancelBtnPressed(_ sender: Any) {

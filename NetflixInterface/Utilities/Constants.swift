@@ -25,4 +25,5 @@ let CATEGORY_CELL_IDENTIFIER = "categoryCell"
 
 // MARK: - Segues
 let TO_SIGNUP_SEGUE = "toSignUpVC"
-
+let TO_HOME_SEGUE = "toHomeVC"
+let TO_CATEGORY_SEGUE = "toCategory"

@@ -136,13 +136,16 @@
                                 <rect key="frame" x="0.0" y="269" width="375" height="353.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="categoryCell" id="5iR-pr-lDU">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="categoryCell" id="5iR-pr-lDU">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5iR-pr-lDU" id="hi4-Bn-oWf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Ql2-lp-5R4" kind="show" identifier="toCategory" id="jo5-OO-iDD"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -191,7 +194,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TSJ-7c-KTL"/>
                     </view>
-                    <navigationItem key="navigationItem" title="TELEVISION" id="M64-JV-013"/>
+                    <navigationItem key="navigationItem" title="TELEVISION" id="M64-JV-013">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="Pgg-Hm-ulR">
+                            <connections>
+                                <action selector="logoutBtnPressed:" destination="cB1-mt-dgv" id="wR6-w3-3sw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="activitySpinner" destination="39w-mw-XxT" id="8i8-gQ-Iha"/>
                         <outlet property="pageCntrl" destination="nMf-D5-ANe" id="V8U-KU-gbk"/>
@@ -202,6 +211,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcU-JY-1qn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1860" y="92.203898050974516"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ULB-iW-Dh9">
+            <objects>
+                <viewController id="Ql2-lp-5R4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NkV-ld-duN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="h6d-ur-4Xc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ots-3b-VzY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2684" y="92"/>
         </scene>
         <!--SignupVC-->
         <scene sceneID="g1q-v8-fhL">
@@ -229,14 +253,14 @@
                                 <color key="backgroundColor" red="0.3290927978" green="0.412507968" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="imv-il-ljN">
                                 <rect key="frame" x="47.5" y="350" width="281" height="40"/>
                                 <color key="backgroundColor" red="0.3290927978" green="0.412507968" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ak6-3T-UHm" customClass="CurvedButton" customModule="NetflixInterface" customModuleProvider="target">
                                 <rect key="frame" x="215.5" y="450.5" width="112.5" height="33"/>
@@ -321,6 +345,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mlG-1a-hJC"/>
+        <segue reference="5gC-ZS-0zT"/>
     </inferredMetricsTieBreakers>
 </document>

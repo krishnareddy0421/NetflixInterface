@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -28,7 +29,6 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         tableView.delegate = self
         tableView.dataSource = self
-        
         tableView.rowHeight = tableView.frame.size.height / 5
         
         categoryArray = ["Latest", "Airing Today", "On The Air", "Popular", "Top Rated"]
@@ -39,12 +39,9 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 self.sliderImgArray = Array(imgArray)
                 
                 self.imgCnt = 0
-                
                 self.scrollTime = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.updateImage), userInfo: nil, repeats: true)
-                
             } else {
-                print("Hellooo")
-                // error alert
+                self.somethingWentWrongAlert()
             }
         }
     }
@@ -81,5 +78,20 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: CATEGORY_CELL_IDENTIFIER, for: indexPath)
         cell.textLabel?.text = categoryArray[indexPath.row]
         return cell
+    }
+    
+    @IBAction func logoutBtnPressed(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+            self.presentLoginScreen()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func presentLoginScreen() {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let initialVC = storyBoard.instantiateViewController(withIdentifier: "LoginVC")
+        present(initialVC, animated: true, completion: nil)
     }
 }
