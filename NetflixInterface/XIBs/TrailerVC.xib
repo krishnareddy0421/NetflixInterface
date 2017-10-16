@@ -9,6 +9,12 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrailerVC" customModule="NetflixInterface" customModuleProvider="target">
             <connections>
@@ -27,7 +33,31 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucy-i8-8TJ">
                     <rect key="frame" x="-0.5" y="216.5" width="375" height="233.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Videos Coming Soon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="flA-zb-dPP">
+                            <rect key="frame" x="85" y="105" width="206.5" height="23"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tap anywhere to close" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="OTq-EC-onB">
+                            <rect key="frame" x="94" y="5" width="187.5" height="23.5"/>
+                            <color key="backgroundColor" red="0.66666668650000005" green="0.0" blue="0.037405119600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="flA-zb-dPP" firstAttribute="centerX" secondItem="ucy-i8-8TJ" secondAttribute="centerX" id="5s0-cs-Vxb"/>
+                        <constraint firstItem="OTq-EC-onB" firstAttribute="top" secondItem="ucy-i8-8TJ" secondAttribute="top" constant="5" id="KCB-5V-nz1"/>
+                        <constraint firstItem="OTq-EC-onB" firstAttribute="centerX" secondItem="ucy-i8-8TJ" secondAttribute="centerX" id="bWC-fJ-JNO"/>
+                        <constraint firstItem="flA-zb-dPP" firstAttribute="width" secondItem="ucy-i8-8TJ" secondAttribute="width" multiplier="0.55" id="csq-A1-GvZ"/>
+                        <constraint firstItem="flA-zb-dPP" firstAttribute="centerY" secondItem="ucy-i8-8TJ" secondAttribute="centerY" id="cux-Up-4rr"/>
+                        <constraint firstItem="OTq-EC-onB" firstAttribute="width" secondItem="ucy-i8-8TJ" secondAttribute="width" multiplier="0.5" id="xrJ-oo-z4f"/>
+                        <constraint firstItem="OTq-EC-onB" firstAttribute="height" secondItem="ucy-i8-8TJ" secondAttribute="height" multiplier="0.1" id="zpj-cG-5FZ"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
