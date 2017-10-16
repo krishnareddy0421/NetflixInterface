@@ -14,12 +14,11 @@ class DataService {
     static let instance = DataService()
     
     var tvInfos = [TVInfo]()
-    
-    func onTheAirTV(urlString: String, completion: @escaping CompletionHandler) {
+    var tvShowCreators = [String]()
+
+    func getTVInfo(urlString: String, completion: @escaping CompletionHandler) {
         let url = URL(string: urlString)
-        
         self.tvInfos.removeAll()
-        
         Alamofire.request(url!).validate().responseJSON { (response) in
             switch response.result {
             case .success(let value):
@@ -29,17 +28,42 @@ class DataService {
                     return
                 }
                 for result in results {
+                    let showId = result["id"].double
                     let name = result["name"].stringValue
+                    let vote = result["vote_average"].double
+                    let overview = result["overview"].stringValue
+                    let posterImg = result["poster_path"].stringValue
+                    let posterUrl = "\(BASE_URL)\(posterImg)"
                     let backdropImg = result["backdrop_path"].stringValue
-                    let imageUrl = "\(BASE_URL)\(backdropImg)"
+                    let backdropUrl = "\(BASE_URL)\(backdropImg)"
                     
-                    let tvInfo = TVInfo(title: name, wallposterUrl: imageUrl)
+                    let tvInfo = TVInfo(id: showId, title: name, voteAverage: vote, description: overview, posterUrl: posterUrl, wallposterUrl: backdropUrl)
                     self.tvInfos.append(tvInfo)
                 }
                 completion(true)
-            case .failure(let error):
-                // Error alert
-                print(error.localizedDescription)
+            case .failure(_):
+                completion(false)
+            }
+        }
+    }
+    
+    func getTVShowDetails(urlString: String, completion: @escaping CompletionHandler) {
+        let url = URL(string: urlString)
+        self.tvShowCreators.removeAll()
+        Alamofire.request(url!).validate().responseJSON { (response) in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                guard let createdBy = json["created_by"].array else {
+                    completion(false)
+                    return
+                }
+                for eachCreator in createdBy {
+                    let name = eachCreator["name"].stringValue
+                    self.tvShowCreators.append(name)
+                }
+                completion(true)
+            case .failure(_):
                 completion(false)
             }
         }

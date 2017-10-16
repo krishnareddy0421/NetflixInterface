@@ -31,9 +31,9 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource = self
         tableView.rowHeight = tableView.frame.size.height / 5
         
-        categoryArray = ["Latest", "Airing Today", "On The Air", "Popular", "Top Rated"]
+        categoryArray = ["Airing Today", "On The Air", "Popular", "Top Rated"]
         
-        DataService.instance.onTheAirTV(urlString: TV_ON_THE_AIR) { (success) in
+        DataService.instance.getTVInfo(urlString: ON_THE_AIR_URL) { (success) in
             if success {
                 let imgArray = DataService.instance.tvInfos[0..<5]
                 self.sliderImgArray = Array(imgArray)
@@ -86,6 +86,14 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             self.presentLoginScreen()
         } catch let error {
             print(error.localizedDescription)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == TO_CATEGORY_SEGUE {
+            let categoryVC = segue.destination as! CategoryVC
+            let indexPath = tableView.indexPathForSelectedRow
+            categoryVC.title = categoryArray[indexPath!.row]
         }
     }
     

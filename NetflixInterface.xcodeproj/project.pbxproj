@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E643A151F94408C008B71A8 /* TVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E643A141F94408C008B71A8 /* TVCell.swift */; };
+		9E643A171F944E8E008B71A8 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E643A161F944E8E008B71A8 /* DetailsVC.swift */; };
+		9E643A1C1F94623E008B71A8 /* TrailerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E643A1A1F94623E008B71A8 /* TrailerVC.swift */; };
+		9E643A1D1F94623E008B71A8 /* TrailerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E643A1B1F94623E008B71A8 /* TrailerVC.xib */; };
 		9E6EB5D71F92DD780088BC1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6EB5D61F92DD780088BC1A /* AppDelegate.swift */; };
 		9E6EB5D91F92DD790088BC1A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6EB5D81F92DD790088BC1A /* LoginVC.swift */; };
 		9E6EB5DC1F92DD790088BC1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E6EB5DA1F92DD790088BC1A /* Main.storyboard */; };
@@ -22,12 +26,17 @@
 		9E6EB5FF1F9312AD0088BC1A /* ImageViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6EB5FE1F9312AD0088BC1A /* ImageViewExt.swift */; };
 		9E6EB6021F9418A10088BC1A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6EB6011F9418A10088BC1A /* AuthService.swift */; };
 		9E6EB6041F941B5E0088BC1A /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6EB6031F941B5E0088BC1A /* Alerts.swift */; };
+		9E6EB6061F942E040088BC1A /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6EB6051F942E040088BC1A /* CategoryVC.swift */; };
 		DE5259B9CE19423935DE36FB /* Pods_NetflixInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E195769B9C55AF2B8E7526C /* Pods_NetflixInterface.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		52FFFEA3EBDDEAB94831F50B /* Pods-NetflixInterface.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetflixInterface.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetflixInterface/Pods-NetflixInterface.debug.xcconfig"; sourceTree = "<group>"; };
 		9E195769B9C55AF2B8E7526C /* Pods_NetflixInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetflixInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E643A141F94408C008B71A8 /* TVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCell.swift; sourceTree = "<group>"; };
+		9E643A161F944E8E008B71A8 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
+		9E643A1A1F94623E008B71A8 /* TrailerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerVC.swift; sourceTree = "<group>"; };
+		9E643A1B1F94623E008B71A8 /* TrailerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrailerVC.xib; sourceTree = "<group>"; };
 		9E6EB5D31F92DD780088BC1A /* NetflixInterface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixInterface.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E6EB5D61F92DD780088BC1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E6EB5D81F92DD790088BC1A /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -45,6 +54,7 @@
 		9E6EB5FE1F9312AD0088BC1A /* ImageViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExt.swift; sourceTree = "<group>"; };
 		9E6EB6011F9418A10088BC1A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		9E6EB6031F941B5E0088BC1A /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		9E6EB6051F942E040088BC1A /* CategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
 		FE2723D541051E2201E4385E /* Pods-NetflixInterface.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetflixInterface.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetflixInterface/Pods-NetflixInterface.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E643A1E1F946244008B71A8 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				9E643A1B1F94623E008B71A8 /* TrailerVC.xib */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
 		9E6EB5CA1F92DD780088BC1A = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +99,7 @@
 		9E6EB5D51F92DD780088BC1A /* NetflixInterface */ = {
 			isa = PBXGroup;
 			children = (
+				9E643A1E1F946244008B71A8 /* XIBs */,
 				9E6EB6001F93C9F70088BC1A /* Error Alerts */,
 				9E6EB5FD1F93129E0088BC1A /* Extensions */,
 				9E6EB5F81F92FC830088BC1A /* Services */,
@@ -104,6 +123,9 @@
 				9E6EB5D81F92DD790088BC1A /* LoginVC.swift */,
 				9E6EB5F41F92EBF40088BC1A /* SignupVC.swift */,
 				9E6EB5F61F92F8E70088BC1A /* HomeVC.swift */,
+				9E6EB6051F942E040088BC1A /* CategoryVC.swift */,
+				9E643A161F944E8E008B71A8 /* DetailsVC.swift */,
+				9E643A1A1F94623E008B71A8 /* TrailerVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -112,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				9E6EB5EC1F92E5E80088BC1A /* CurvedButton.swift */,
+				9E643A141F94408C008B71A8 /* TVCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -240,6 +263,7 @@
 				9E6EB5E91F92E1690088BC1A /* GoogleService-Info.plist in Resources */,
 				9E6EB5DE1F92DD790088BC1A /* Assets.xcassets in Resources */,
 				9E6EB5DC1F92DD790088BC1A /* Main.storyboard in Resources */,
+				9E643A1D1F94623E008B71A8 /* TrailerVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,15 +336,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E643A1C1F94623E008B71A8 /* TrailerVC.swift in Sources */,
+				9E643A151F94408C008B71A8 /* TVCell.swift in Sources */,
 				9E6EB5F51F92EBF40088BC1A /* SignupVC.swift in Sources */,
 				9E6EB5F71F92F8E70088BC1A /* HomeVC.swift in Sources */,
 				9E6EB5F31F92E76A0088BC1A /* Constants.swift in Sources */,
 				9E6EB5D91F92DD790088BC1A /* LoginVC.swift in Sources */,
 				9E6EB5ED1F92E5E80088BC1A /* CurvedButton.swift in Sources */,
 				9E6EB5F01F92E7380088BC1A /* TVInfo.swift in Sources */,
+				9E6EB6061F942E040088BC1A /* CategoryVC.swift in Sources */,
 				9E6EB5D71F92DD780088BC1A /* AppDelegate.swift in Sources */,
 				9E6EB6021F9418A10088BC1A /* AuthService.swift in Sources */,
 				9E6EB5FF1F9312AD0088BC1A /* ImageViewExt.swift in Sources */,
+				9E643A171F944E8E008B71A8 /* DetailsVC.swift in Sources */,
 				9E6EB6041F941B5E0088BC1A /* Alerts.swift in Sources */,
 				9E6EB5FA1F92FC9F0088BC1A /* DataService.swift in Sources */,
 			);

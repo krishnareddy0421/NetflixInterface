@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrailerVC" customModule="NetflixInterface" customModuleProvider="target">
+            <connections>
+                <outlet property="bgView" destination="WoW-G8-sGL" id="L9R-Yd-JNe"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WoW-G8-sGL" userLabel="bgView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucy-i8-8TJ">
+                    <rect key="frame" x="-0.5" y="216.5" width="375" height="233.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="WoW-G8-sGL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="-20" id="9na-S0-hBM"/>
+                <constraint firstItem="ucy-i8-8TJ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="HwX-5f-bFQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="WoW-G8-sGL" secondAttribute="bottom" id="NxX-as-ORU"/>
+                <constraint firstItem="WoW-G8-sGL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="P1l-Ha-z1d"/>
+                <constraint firstItem="ucy-i8-8TJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ebD-Wf-niG"/>
+                <constraint firstItem="ucy-i8-8TJ" firstAttribute="height" secondItem="WoW-G8-sGL" secondAttribute="height" multiplier="0.35" id="mdp-Fh-53B"/>
+                <constraint firstItem="ucy-i8-8TJ" firstAttribute="width" secondItem="WoW-G8-sGL" secondAttribute="width" id="sUR-6f-jrg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WoW-G8-sGL" secondAttribute="trailing" id="t3E-PD-uyv"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="73.5"/>
+        </view>
+    </objects>
+</document>
