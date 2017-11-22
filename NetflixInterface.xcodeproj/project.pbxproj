@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9E643A151F94408C008B71A8 /* TVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E643A141F94408C008B71A8 /* TVCell.swift */; };
 		9E643A171F944E8E008B71A8 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E643A161F944E8E008B71A8 /* DetailsVC.swift */; };
-		9E643A1C1F94623E008B71A8 /* TrailerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E643A1A1F94623E008B71A8 /* TrailerVC.swift */; };
 		9E643A1D1F94623E008B71A8 /* TrailerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E643A1B1F94623E008B71A8 /* TrailerVC.xib */; };
 		9E6EB5D71F92DD780088BC1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6EB5D61F92DD780088BC1A /* AppDelegate.swift */; };
 		9E6EB5D91F92DD790088BC1A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6EB5D81F92DD790088BC1A /* LoginVC.swift */; };
@@ -35,7 +34,6 @@
 		9E195769B9C55AF2B8E7526C /* Pods_NetflixInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetflixInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E643A141F94408C008B71A8 /* TVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCell.swift; sourceTree = "<group>"; };
 		9E643A161F944E8E008B71A8 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
-		9E643A1A1F94623E008B71A8 /* TrailerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerVC.swift; sourceTree = "<group>"; };
 		9E643A1B1F94623E008B71A8 /* TrailerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrailerVC.xib; sourceTree = "<group>"; };
 		9E6EB5D31F92DD780088BC1A /* NetflixInterface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixInterface.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E6EB5D61F92DD780088BC1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 				9E6EB5F61F92F8E70088BC1A /* HomeVC.swift */,
 				9E6EB6051F942E040088BC1A /* CategoryVC.swift */,
 				9E643A161F944E8E008B71A8 /* DetailsVC.swift */,
-				9E643A1A1F94623E008B71A8 /* TrailerVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -336,7 +333,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E643A1C1F94623E008B71A8 /* TrailerVC.swift in Sources */,
 				9E643A151F94408C008B71A8 /* TVCell.swift in Sources */,
 				9E6EB5F51F92EBF40088BC1A /* SignupVC.swift in Sources */,
 				9E6EB5F71F92F8E70088BC1A /* HomeVC.swift in Sources */,

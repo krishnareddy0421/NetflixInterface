@@ -35,10 +35,4 @@ class DetailsVC: UIViewController {
         titleLbl.text = "\(tvInfoDetails.title!)"
         overviewLbl.text = "\(tvInfoDetails.description!)"
     }
-    
-    @IBAction func playTrailerBtnPressed(_ sender: Any) {
-        let trailer = TrailerVC()
-        trailer.modalPresentationStyle = .custom
-        present(trailer, animated: true, completion: nil)
-    }
 }
